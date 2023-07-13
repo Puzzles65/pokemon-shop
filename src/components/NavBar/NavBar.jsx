@@ -3,7 +3,7 @@ import * as userService from '../../utilities/users-service';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-
+import { ShoppingCart  } from 'phosphor-react';
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -25,6 +25,9 @@ export default function NavBar({ user, setUser }) {
         <Nav className="me-auto">
           <Nav.Item className="text-light">Welcome, {user.name}</Nav.Item>
           &nbsp;&nbsp;<Nav.Link as={Link} to="" onClick={handleLogOut}>Log Out</Nav.Link> 
+          <Nav.Link as={Link} to="/cart">
+            <ShoppingCart size={32} />
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Container>
