@@ -4,6 +4,10 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { ShoppingCart  } from 'phosphor-react';
+import logo from '../../assets/logo/logo2.png';
+import '../NavBar/NavBar.scss';
+
+
 
 export default function NavBar({ user, setUser }) {
   function handleLogOut() {
@@ -14,7 +18,7 @@ export default function NavBar({ user, setUser }) {
   return (
   <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
     <Container>
-      <Navbar.Brand as={Link} to="/home">Logo</Navbar.Brand>
+      <Navbar.Brand as={Link} to="/home"><img src={logo} className="logo" alt="" /></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="me-auto">
