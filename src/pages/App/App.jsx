@@ -7,7 +7,7 @@ import AuthPage from '../AuthPage/AuthPage';
 import NavBar from '../../components/NavBar/NavBar';
 import HomePage from '../HomePage/HomePage';
 import CardsPage from '../CardsPage/CardsPage';
-import AccessoriesPage from '../AccessoriesPage/AcessoriesPage';
+import AccessoriesPage from '../AccessoriesPage/AccessoriesPage';
 import PlushiesPage from '../PlushiesPage/PlushiesPage';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 

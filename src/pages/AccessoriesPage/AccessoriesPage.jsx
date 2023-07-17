@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from 'react';
 import * as categoriesAPI from '../../utilities/categories-api';
-import CardsItem from '../../components/CardsItem/CardsItem';
-import '../CardsPage/CardsPage.scss'
+import AccessoriesItem from '../../components/AccessoriesItem/AccesoriesItem';
+import '../AccessoriesPage/AccessoriesPage.scss';
 
-export default function CardsPage() {
+
+export default function PlushiesPage() {
     const [items, setItems] = useState(null);
 
     useEffect(() => {
         async function getItems(){
-            const card = await categoriesAPI.getSingle('Cards');
+            const card = await categoriesAPI.getSingle('Accessories');
             
             setItems(card.items); 
         }
@@ -18,10 +19,10 @@ export default function CardsPage() {
 
 
     return (
-      <main className="CardsList">
+      <main className="AccessoriesList">
         
         {items && items.map(item =>
-            <CardsItem
+            <AccessoriesItem
                 
                 key={item._id}
                 menuItem={item}

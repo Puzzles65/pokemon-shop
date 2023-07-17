@@ -1,6 +1,6 @@
-export default function CardsItem({ menuItem }) {
+export default function AccessoriesItem({ menuItem }) {
     return (
-      <div className="MenuListItem">
+      <div className="AccessoriesListItem">
         <div className="image"><img src={menuItem.image} alt="" /></div>
         <div className="name">{menuItem.name}</div>
         <div className="buy">
