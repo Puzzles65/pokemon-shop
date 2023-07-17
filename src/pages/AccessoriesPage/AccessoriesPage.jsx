@@ -4,7 +4,7 @@ import AccessoriesItem from '../../components/AccessoriesItem/AccesoriesItem';
 import '../AccessoriesPage/AccessoriesPage.scss';
 
 
-export default function PlushiesPage() {
+export default function AccessoriesPage() {
     const [items, setItems] = useState(null);
 
     useEffect(() => {
