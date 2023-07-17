@@ -8,4 +8,15 @@ const categorySchema = new Schema({
   timestamps: true
 });
 
+categorySchema.virtual('items', {
+  ref: 'Item',
+  localField: '_id',
+  foreignField: 'category'
+}) 
+
+categorySchema.set('toJSON', {
+  virtuals: true
+})
+
+
 module.exports = mongoose.model('Category', categorySchema);

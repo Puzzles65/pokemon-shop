@@ -12,7 +12,7 @@ export default function NavBar({ user, setUser }) {
   }
 
   return (
-  <Navbar expand="lg" Navbar bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
+  <Navbar expand="lg" bg="dark" data-bs-theme="dark" className="bg-body-tertiary">
     <Container>
       <Navbar.Brand as={Link} to="/home">Logo</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />

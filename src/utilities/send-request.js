@@ -12,9 +12,10 @@ export default async function sendRequest(url, method = 'GET', payload = null) {
   if (token) {
     // Need to add an Authorization header
     // Use the Logical OR Assignment operator
-    //options.headers ||= {};
+    options.headers ||= {};
     // Older approach
     // options.headers = options.headers || {};
+    //console.log(options)
     options.headers.Authorization = `Bearer ${token}`;
   }
   const res = await fetch(url, options);
