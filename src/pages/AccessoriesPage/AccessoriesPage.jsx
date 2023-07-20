@@ -1,11 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import * as categoriesAPI from '../../utilities/categories-api';
+
 import AccessoriesItem from '../../components/AccessoriesItem/AccesoriesItem';
 import '../AccessoriesPage/AccessoriesPage.scss';
 
 
-export default function AccessoriesPage() {
+export default function AccessoriesPage({handleAddToOrder}) {
     const [items, setItems] = useState(null);
+    const [cart, setCart] = useState([]);
 
     useEffect(() => {
         async function getItems(){
@@ -14,10 +16,11 @@ export default function AccessoriesPage() {
             setItems(card.items); 
         }
         getItems();
+
     }, [])
-
-
-
+    
+    
+   
     return (
       <main className="AccessoriesList">
         
@@ -26,6 +29,7 @@ export default function AccessoriesPage() {
                 
                 key={item._id}
                 menuItem={item}
+                handleAddToOrder={handleAddToOrder}
             />
             )}
       </main>

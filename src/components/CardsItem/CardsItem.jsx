@@ -5,7 +5,7 @@ export default function CardsItem({ menuItem }) {
         <div className="name">{menuItem.name}</div>
         <div className="buy">
           <span>${menuItem.price.toFixed(2)}</span>
-          <button className="btn-sm" onClick={() => console.log('clicked')}>
+          <button className="btn-sm" onClick={() => console.log(menuItem)}>
             ADD
           </button>
         </div>

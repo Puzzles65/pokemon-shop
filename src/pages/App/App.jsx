@@ -11,6 +11,8 @@ import AccessoriesPage from '../AccessoriesPage/AccessoriesPage';
 import PlushiesPage from '../PlushiesPage/PlushiesPage';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 
+
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -29,6 +31,7 @@ export default function App() {
               <Route path="/cards" element={<CardsPage />} />
               <Route path="/accessories" element={<AccessoriesPage />} />
               <Route path="/plushies" element={<PlushiesPage />} />
+              
               <Route path="/cart" element={<ShoppingCart />} />
               
             </Routes>

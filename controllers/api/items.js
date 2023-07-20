@@ -2,7 +2,7 @@ const Item = require('../../models/item');
 
 module.exports = {
   index,
-  show
+  show,
 };
 
 async function index(req, res) {
@@ -18,3 +18,4 @@ async function show(req, res) {
   const item = await Item.findById(req.params.id);
   res.json(item);
 }
+

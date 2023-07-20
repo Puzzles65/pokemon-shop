@@ -1,7 +1,8 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import * as categoriesAPI from '../../utilities/categories-api';
 import CardsItem from '../../components/CardsItem/CardsItem';
 import '../CardsPage/CardsPage.scss'
+
 
 export default function CardsPage() {
     const [items, setItems] = useState(null);
@@ -15,8 +16,6 @@ export default function CardsPage() {
         getItems();
     }, [])
 
-
-
     return (
       <main className="CardsList">
         
@@ -25,8 +24,10 @@ export default function CardsPage() {
                 
                 key={item._id}
                 menuItem={item}
+                
             />
             )}
+            
       </main>
     );
   }

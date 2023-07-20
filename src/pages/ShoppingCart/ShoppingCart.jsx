@@ -1,3 +1,3 @@
-export default function ShoppingCart() {
-    return <h1>ShoppingCart</h1>
+export default function ShoppingCart(){
+  return <h1>smth</h1>
 }
