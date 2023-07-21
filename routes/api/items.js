@@ -13,5 +13,8 @@ router.put('/', itemsCtrl.add);
 router.post('/:id', itemsCtrl.edit);
 // DELETE /api/items/:id
 router.delete('/:id', itemsCtrl.remove);
+// POST /api/items
+router.post('/', itemsCtrl.addNewItem);
+
 
 module.exports = router;

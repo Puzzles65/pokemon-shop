@@ -11,7 +11,7 @@ import AccessoriesPage from '../AccessoriesPage/AccessoriesPage';
 import PlushiesPage from '../PlushiesPage/PlushiesPage';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 
-
+import AddNewItemPage from '../AddNewItemPage/AddNewItemPage';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -31,6 +31,7 @@ export default function App() {
               <Route path="/cards" element={<CardsPage user={user} />} />
               <Route path="/accessories" element={<AccessoriesPage user={user} />} />
               <Route path="/plushies" element={<PlushiesPage user={user} />} />
+              <Route path="/new" element={<AddNewItemPage />} />
               
               <Route path="/cart" element={<ShoppingCart user={user} />} />
               

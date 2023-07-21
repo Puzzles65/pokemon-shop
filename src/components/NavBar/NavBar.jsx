@@ -25,6 +25,7 @@ export default function NavBar({ user, setUser }) {
           <Nav.Link as={Link} to="/cards">Cards</Nav.Link>
           <Nav.Link as={Link} to="/accessories">Accessories</Nav.Link>
           <Nav.Link as={Link} to="/plushies">Plushies</Nav.Link>
+          <Nav.Link as={Link} to="/new">Add Item</Nav.Link>
         </Nav>
         <Nav className="me-auto">
           <Nav.Item className="text-light">Welcome, {user.name}</Nav.Item>
