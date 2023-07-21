@@ -1,6 +1,6 @@
 import * as usersAPI from '../../utilities/users-api';
 
-export default function PlushiesItem({ menuItem, user, onRemove, options=[
+export default function AccessoriesItem({ menuItem, user, onRemove, options=[
   'add'
 ] }) {
     const userId = user._id;
@@ -17,7 +17,7 @@ export default function PlushiesItem({ menuItem, user, onRemove, options=[
     }
 
     return (
-      <div className="PlushiesListItem">
+      <div className="AccessoriesListItem">
         <div className="image"><img src={menuItem.image} alt="" /></div>
         <div className="name">{menuItem.name}</div>
         <div className="buy">

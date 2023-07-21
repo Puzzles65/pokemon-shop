@@ -3,10 +3,19 @@ const bcrypt = require('bcrypt');
 const User = require('../../models/user');
 
 module.exports = {
+  showAll,
   create,
   login,
-  checkToken
+  checkToken,
+  showCart,
+  addItemToCart,
+  removeItemFromCart
 };
+
+async function showAll(req, res) {
+  const users = await User.find();
+  res.json(users); 
+}
 
 function checkToken(req, res) {
   console.log('req.user', req.user);
@@ -36,6 +45,36 @@ async function login(req, res) {
     res.status(400).json('Bad Credentials');
   }
 }
+
+/*--- Cart Functions --*/
+async function showCart(req, res) {
+  const user = await User.findById(req.query.userId).populate('cart');
+  if (user) {
+    return res.json(user.cart);
+  }
+  res.json([]);
+}
+
+async function addItemToCart(req, res) {
+  const user = await User.findByIdAndUpdate(
+    req.query.userId,
+    { $addToSet: { cart: req.query.itemId } },
+    { new: true }
+  );
+
+  res.json(user);
+}
+
+async function removeItemFromCart(req, res) {
+  const user = await User.findByIdAndUpdate(
+    req.query.userId,
+    { $pull: { cart: req.query.itemId } },
+    { new: true }
+  );
+
+  res.json(user);
+}
+
 
 /*--- Helper Functions --*/
 

@@ -28,11 +28,11 @@ export default function App() {
               {/* Route components in here */}
               
               <Route path="/home" element={<HomePage />} />
-              <Route path="/cards" element={<CardsPage />} />
-              <Route path="/accessories" element={<AccessoriesPage />} />
-              <Route path="/plushies" element={<PlushiesPage />} />
+              <Route path="/cards" element={<CardsPage user={user} />} />
+              <Route path="/accessories" element={<AccessoriesPage user={user} />} />
+              <Route path="/plushies" element={<PlushiesPage user={user} />} />
               
-              <Route path="/cart" element={<ShoppingCart />} />
+              <Route path="/cart" element={<ShoppingCart user={user} />} />
               
             </Routes>
           </>

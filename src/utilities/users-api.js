@@ -12,3 +12,15 @@ export async function login(credentials) {
 export async function checkToken() {
   return sendRequest(`${BASE_URL}/check-token`);
 }
+
+export async function getCart(userId) {
+  return sendRequest(`${BASE_URL}/cart?userId=${userId}`);
+}
+
+export async function addItemToCart(userId, itemId) {
+  return sendRequest(`${BASE_URL}/cart?userId=${userId}&itemId=${itemId}`, 'PUT');
+}
+
+export async function removeItemFromCart(userId, itemId) {
+  return sendRequest(`${BASE_URL}/cart?userId=${userId}&itemId=${itemId}`, 'DELETE');
+}
