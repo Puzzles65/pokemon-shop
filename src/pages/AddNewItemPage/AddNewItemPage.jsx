@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import '../AddNewItemPage/AddNewItemPage.scss'
 
 const AddItemForm = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +43,7 @@ const AddItemForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="AddItemForm" onSubmit={handleSubmit}>
       <input
         type="text"
         name="name"
