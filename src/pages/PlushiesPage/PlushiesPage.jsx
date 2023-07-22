@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as categoriesAPI from '../../utilities/categories-api';
-import PlushiesItem from '../../components/PlushesItem/PlushiesItem'
+import CardsItem from '../../components/CardsItem/CardsItem';
 import '../PlushiesPage/PlushiesPage.scss';
 
 export default function CardsPage(props) {
@@ -19,7 +19,7 @@ export default function CardsPage(props) {
   return (
     <main className="PlushiesList">
       {items && items.map(item => (
-          <PlushiesItem
+          <CardsItem
               key={item._id}
               menuItem={item}
               user={props.user}

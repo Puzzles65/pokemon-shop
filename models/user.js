@@ -16,7 +16,7 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  cart: [{type: Schema.Types.ObjectId, ref: 'Item'}]
+  cart: [{type: Schema.Types.ObjectId, ref: 'CartItem'}]
 }, {
   timestamps: true,
   toJSON: {

@@ -5,7 +5,7 @@
     justify-content: center;
     margin-top: 20px;
   
-    .AccessoriesListItem {
+    .CardsListItem {
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 10px;
@@ -44,6 +44,7 @@
         margin-top: auto;
   
         .btn-sm {
+          margin-top: 10px;
           background-color: #007bff;
           color: #fff;
           border: none;

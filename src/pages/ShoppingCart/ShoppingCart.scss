@@ -1,68 +1,69 @@
-// Define styles for the overall ShoppingCart container
+
+
 .ShoppingCart {
-    padding: 20px;
-  
-    h1 {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-  
-    // Style for each individual item in the cart
-    .ShoppingCart__item {
-      display: flex;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-  
-      // Nest the CardsItem component styles
-      .CardsListItem {
-        display: flex;
-        align-items: center;
-        width: 100%;
-  
-        // Styles for the image container
-        .image {
-          margin-right: 10px;
-          img {
-            max-width: 100px; // Adjust the maximum width as needed
-            height: auto; // Maintain aspect ratio of the image
-          }
-        }
-  
-        // Styles for the name of the item
-        .name {
-          font-size: 18px;
-          font-weight: bold;
-        }
-  
-        // Styles for the buy section (price and remove button)
-        .buy {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-          margin-left: auto;
-  
-          // Style the price span
-          span {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 5px;
-          }
-  
-          // Styles for the REMOVE button
-          .btn-sm {
-            padding: 5px 10px;
-            font-size: 14px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-  
-            &:hover {
-              background-color: #ddd;
-            }
-          }
-        }
-      }
-    }
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+
+.CardsListItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: 10px;
   }
-  
+
+  .name {
+    font-size: 18px;
+    flex: 1;
+  }
+
+  .buy {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; 
+  }
+
+  span {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  input {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &.btn-sm {
+      font-size: 14px;
+    }
+
+    &.btn-rem {
+      background-color: red; 
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: grey;
+    }
+
+  }
+}
+}

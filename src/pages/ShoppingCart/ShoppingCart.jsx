@@ -1,5 +1,5 @@
 import  { React, useState, useEffect } from 'react';
-import * as usersAPI from '../../utilities/users-api';
+import * as cartAPI from '../../utilities/cart-api';
 import CardsItem from '../../components/CardsItem/CardsItem';
 
 import './ShoppingCart.scss';
@@ -11,7 +11,7 @@ export default function ShoppingCart(props) {
     const userId = user._id;
 
     async function fetchAndSetCart(){
-        const result = await usersAPI.getCart(userId);
+        const result = await cartAPI.getCart(userId);
 
         if (result) {
             setCart(result);
@@ -25,9 +25,20 @@ export default function ShoppingCart(props) {
     return (
         <div className="ShoppingCart">
             <h1>ShoppingCart</h1>
-            {cart.map((item) => (
-                <div className="ShoppingCart__item" key={item._id}>
-                    <CardsItem menuItem={item} options={['remove']} user={user} onRemove={fetchAndSetCart} />
+            {cart.map(({ item, quantity, _id }) => (
+                <div className="ShoppingCart__item" key={_id}>
+                    <CardsItem 
+                        menuItem={item} 
+                        cartItemId={_id}
+                        baseQuantity={quantity}
+                        options={[
+                            'remove',
+                            'edit'
+                        ]} 
+                        user={user} 
+                        onRemove={fetchAndSetCart} 
+                        onEdit={fetchAndSetCart}
+                    />
                 </div>
             ))}
         </div>

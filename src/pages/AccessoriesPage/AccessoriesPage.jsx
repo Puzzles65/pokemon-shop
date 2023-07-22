@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import * as categoriesAPI from '../../utilities/categories-api';
-import AccessoriesItem from '../../components/AccessoriesItem/AccessoriesItem'
+import CardsItem from '../../components/CardsItem/CardsItem';
 import '../AccessoriesPage/AccessoriesPage.scss'
 
 export default function AccessoryPage(props) {
@@ -20,7 +20,7 @@ export default function AccessoryPage(props) {
     return (
       <main className="AccessoriesList">
         {items && items.map(item => (
-            <AccessoriesItem
+            <CardsItem
                 key={item._id}
                 menuItem={item}
                 user={props.user}
