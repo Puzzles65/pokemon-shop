@@ -12,6 +12,13 @@ const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 
+// This tells the server to look for a build of the react app.
+if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/build/index.html'));
+  });
+ }
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
 app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
