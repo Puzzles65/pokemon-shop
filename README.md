@@ -75,7 +75,10 @@ const token = createJWT(user);
 res.json(token);
 } catch (err) {
 res.status(400).json('Bad Credentials');
+```
 Subsequently, my focus shifted to developing models for items and categories, a step aimed at populating the database with essential data.
+
+```javascript
 const itemSchema = new Schema({
 user: {type: Schema.Types.ObjectId, ref: 'User'},
 item: {type: Schema.Types.ObjectId, ref: 'Item'},
