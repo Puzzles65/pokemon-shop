@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const favicon = require('serve-favicon');
+//const favicon = require('serve-favicon');
 const logger = require('morgan');
 // Always require and configure near the top
 require('dotenv').config();
@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production' || process.env.NODE_ENV === 'staging')
  }
 // Configure both serve-favicon & static middleware
 // to serve from the production 'build' folder
-app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
+//app.use(favicon(path.join(__dirname, 'build', 'favicon.ico')));
 app.use(express.static(path.join(__dirname, 'build')));
 
 // Middleware to check and verify a JWT and
